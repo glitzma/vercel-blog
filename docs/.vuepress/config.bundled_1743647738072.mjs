@@ -100,7 +100,7 @@ var config_default = defineConfig4CustomTheme({
           { text: "\u5B66\u4E60", link: "/pages/f2a556/" },
           { text: "\u9762\u8BD5", link: "/pages/aea6571b7a8bae86/" },
           { text: "\u5FC3\u60C5\u6742\u8D27", link: "/pages/2d615df9a36a98ed/" },
-          { text: "\u5B9E\u7528\u6280\u5DE7", link: "/pages/baaa02/" },
+          { text: "\u5B9E\u7528\u6280\u5DE7", link: "/pages/usemac/" },
           { text: "\u53CB\u60C5\u94FE\u63A5", link: "/friends/" }
         ]
       },

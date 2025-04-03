@@ -92,9 +92,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         items: [
           { text: '学习', link: '/pages/f2a556/' },
           { text: '面试', link: '/pages/aea6571b7a8bae86/' },
-          { text: '心情杂货', link: '/pages/2d615df9a36a98ed/' },
-          { text: '实用技巧', link: '/pages/baaa02/' },
-          { text: '友情链接', link: '/friends/' },
+          { text: '实用技巧', link: '/pages/usemac/' },
         ],
       },
       { text: '关于', link: '/about/' },
@@ -201,16 +199,16 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 页脚信息
     footer: {
-      createYear: 2019, // 博客创建年份
+      createYear: 2015, // 博客创建年份
       copyrightInfo:
-        'Glitz Ma | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a> | <a href="http://beian.miit.gov.cn/" target="_blank">桂ICP备2024034950号</a> | <img src="/img/beian.png" style="width: 15px; margin-bottom: -3px;" /> <a href="https://beian.mps.gov.cn/#/query/webSearch?code=45142202000030" rel="noreferrer" target="_blank">桂公网安备45142202000030</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
+        'Glitz Ma', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
     extendFrontmatter: {
       author: {
-        name: 'xugaoyi',
-        link: 'https://github.com/xugaoyi'
+        name: 'mamingjuan',
+        link: 'https://github.com/glitzma'
       }
     },
 
