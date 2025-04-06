@@ -35,12 +35,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         items: [
           // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
           {
-            text: '前端文章',
-            items: [
-              { text: 'JavaScript', link: '/pages/8143cc480faf9a11/' },
-            ],
-          },
-          {
             text: '学习笔记',
             items: [
               { text: '《JavaScript教程》', link: '/note/javascript/' },
@@ -81,7 +75,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         link: '/technology/',
         items: [
           { text: '技术文档', link: '/pages/4d115c/' },
-          { text: 'GitHub技巧', link: '/pages/4c778760be26d8b3/' },
           { text: '算法', link: '/pages/916dbb/' },
           { text: '工作总结', link: '/pages/e43ae5/' },
         ],
