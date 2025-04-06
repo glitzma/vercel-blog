@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <div class="icons" v-if="social && social.icons">
+    <!-- <div class="icons" v-if="social && social.icons">
       <a
         :href="item.link"
         :title="item.title"
@@ -9,7 +9,7 @@
         :key="index"
         target="_blank"
       ></a>
-    </div>
+    </div> -->
 
     <template v-if="footer">
       Copyright © {{ footer.createYear }}-{{ new Date().getFullYear() }}

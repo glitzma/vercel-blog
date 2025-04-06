@@ -36,6 +36,7 @@
             v-for="(feature, index) in homeData.features"
             :key="index"
           >
+          模压dsaflkjdsf
             <router-link v-if="feature.link" :to="feature.link">
               <img
                 class="feature-img"

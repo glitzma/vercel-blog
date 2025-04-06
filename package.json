@@ -29,7 +29,7 @@
     "vuepress-plugin-sitemap": "^2.3.1",
     "vuepress-plugin-thirdparty-search": "^1.0.2",
     "vuepress-plugin-zooming": "^1.1.7",
-    "vuepress-theme-vdoing": "^1.12.9",
+    "vuepress-theme-vdoing": "file:./vdoing",
     "yamljs": "^0.3.0"
   }
 }
