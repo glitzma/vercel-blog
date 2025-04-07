@@ -65,7 +65,7 @@
       /> -->
     </Page>
 
-    <!-- <Footer /> -->
+    <Footer />
 
     <Buttons ref="buttons" @toggle-theme-mode="toggleThemeMode" />
 
