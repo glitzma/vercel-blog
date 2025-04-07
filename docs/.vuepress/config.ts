@@ -155,7 +155,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // pageButton: false, // 是否显示快捷翻页按钮，默认true
 
     // 默认外观模式（用户未在页面手动修改过模式时才生效，否则以用户设置的模式为准），可选：'auto' | 'light' | 'dark' | 'read'，默认'auto'。
-    defaultMode: 'light',
+    defaultMode: 'read',
 
     // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | <自定义>    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
     sidebar: 'structuring',
@@ -246,14 +246,14 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
     ],
 
-    'vuepress-plugin-baidu-autopush', // 百度自动推送
+    // 'vuepress-plugin-baidu-autopush', // 百度自动推送
 
-    [
-      'vuepress-plugin-baidu-tongji', // 百度统计
-      {
-        hm: baiduCode,
-      },
-    ],
+    // [
+    //   'vuepress-plugin-baidu-tongji', // 百度统计
+    //   {
+    //     hm: baiduCode,
+    //   },
+    // ],
 
     // 全文搜索。 ⚠️注意：此插件会在打开网站时多加载部分js文件用于搜索，导致初次访问网站变慢。如在意初次访问速度的话可以不使用此插件！（推荐：vuepress-plugin-thirdparty-search）
     // 'fulltext-search',
@@ -325,11 +325,11 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       {
         choosen: 'gitalk',
         options: {
-          clientID: 'a6e1355287947096b88b',
-          clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-          repo: 'blog-gitalk-comment', // GitHub 仓库
-          owner: 'xugaoyi', // GitHub仓库所有者
-          admin: ['xugaoyi'], // 对仓库有写权限的人
+          clientID: '8a8132b8a43c18b5ab7b',
+          clientSecret: '1f0a44bacaf515ab3ae3a6c2cd1c93d155ff01fc',
+          repo: 'glitzma', // GitHub 仓库
+          owner: 'glitzma', // GitHub仓库所有者
+          admin: ['glitzma'], // 对仓库有写权限的人
           // distractionFreeMode: true,
           pagerDirection: 'last', // 'first'正序 | 'last'倒序
           id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
