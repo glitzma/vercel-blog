@@ -118,7 +118,7 @@ var config_default = defineConfig4CustomTheme({
     ],
     sidebarDepth: 2,
     logo: "/img/logo.png",
-    repo: "xugaoyi/vuepress-theme-vdoing",
+    // repo: "xugaoyi/vuepress-theme-vdoing",
     searchMaxSuggestions: 10,
     lastUpdated: "\u4E0A\u6B21\u66F4\u65B0",
     docsDir: "docs",
@@ -126,8 +126,8 @@ var config_default = defineConfig4CustomTheme({
     editLinkText: "\u7F16\u8F91",
     sidebar: "structuring",
     author: {
-      name: "xugaoyi",
-      link: "https://github.com/xugaoyi"
+      name: "glitzma",
+      link: "https://github.com/glitzma"
     },
     blogger: {
       avatar: "https://avatars.githubusercontent.com/u/49772593?v=4",
