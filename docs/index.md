@@ -10,7 +10,7 @@ bodyBgImg: ['/img/bg.jpg', '/img/bg2.jpg', '/img/bg3.jpg']
 
 features: # 可选的
   - title: 基础知识
-    details: JavaScript、TypeScript、React框架等基础知识
+    details: JavaScript、TypeScript等基础知识
     link: /web/ # 可选
     imgUrl: /img/ui.png # 可选
   # - title: 页面

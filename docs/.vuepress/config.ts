@@ -60,27 +60,29 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         link: '/technology/',
         items: [
           { text: '技术文档', link: '/pages/4d115c/' },
-          { text: '算法', link: '/pages/916dbb/' },
+          { text: '算法', link: '/pages/3b2aae/' },
           { text: '工作总结', link: '/pages/e43ae5/' },
-        ],
-      },
-      {
-        text: 'More',
-        link: '/more/',
-        items: [
           { text: '实用技巧', link: '/pages/usemac/' },
+          { text: 'collect', link: '/pages/beb6c0bd8a66cea6/' },
         ],
       },
+      // {
+      //   text: 'More',
+      //   link: '/more/',
+      //   items: [
+      //     { text: '实用技巧', link: '/pages/usemac/' },
+      //   ],
+      // },
       { text: 'About', link: '/about/' },
-      {
-        text: 'collect',
-        link: '/pages/beb6c0bd8a66cea6/',
-        // items: [
-        //   { text: '网站', link: '/pages/beb6c0bd8a66cea6/' },
-        //   { text: '资源', link: '/pages/eee83a9211a70f9d/' },
-        //   { text: 'Vue资源', link: '/pages/12df8ace52d493f6/' },
-        // ],
-      },
+      // {
+      //   text: 'collect',
+      //   link: '/pages/beb6c0bd8a66cea6/',
+      //   // items: [
+      //   //   { text: '网站', link: '/pages/beb6c0bd8a66cea6/' },
+      //   //   { text: '资源', link: '/pages/eee83a9211a70f9d/' },
+      //   //   { text: 'Vue资源', link: '/pages/12df8ace52d493f6/' },
+      //   // ],
+      // },
       {
         text: 'Index',
         link: '/archives/',
