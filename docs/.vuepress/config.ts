@@ -5,8 +5,8 @@ import { resolve } from 'path'
 import { defineConfig4CustomTheme, UserPlugins } from 'vuepress/config'
 import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types'
 import dayjs from 'dayjs'
-import baiduCode from './config/baiduCode' // 百度统计hm码
-import htmlModules from './config/htmlModules' // 自定义插入的html块
+// import baiduCode from './config/baiduCode' // 百度统计hm码
+// import htmlModules from './config/htmlModules' // 自定义插入的html块
 
 const DOMAIN_NAME = 'mamingjuan.cn' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
@@ -28,18 +28,17 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   themeConfig: {
     // 导航配置
     nav: [
-      { text: '首页', link: '/' },
+      { text: 'Home', link: '/' },
       {
-        text: '前端',
+        text: 'Basic knowledge',
         link: '/web/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
         items: [
           // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
           {
-            text: '学习笔记',
+            text: '学习手册',
             items: [
               { text: '《JavaScript教程》', link: '/note/javascript/' },
               { text: '《ES6 教程》', link: '/note/es6/' },
-              { text: '《React》', link: '/note/react/' },
               {
                 text: '《TypeScript 从零实现 axios》',
                 link: '/note/typescript-axios/',
@@ -57,7 +56,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         ],
       },
       {
-        text: '技术',
+        text: 'Summary',
         link: '/technology/',
         items: [
           { text: '技术文档', link: '/pages/4d115c/' },
@@ -66,15 +65,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         ],
       },
       {
-        text: '更多',
+        text: 'More',
         link: '/more/',
         items: [
           { text: '实用技巧', link: '/pages/usemac/' },
         ],
       },
-      { text: '关于', link: '/about/' },
+      { text: 'About', link: '/about/' },
       {
-        text: '收藏',
+        text: 'collect',
         link: '/pages/beb6c0bd8a66cea6/',
         // items: [
         //   { text: '网站', link: '/pages/beb6c0bd8a66cea6/' },
@@ -83,12 +82,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         // ],
       },
       {
-        text: '索引',
+        text: 'Index',
         link: '/archives/',
         items: [
-          { text: '分类', link: '/categories/' },
-          { text: '标签', link: '/tags/' },
-          { text: '归档', link: '/archives/' },
+          { text: 'Classification', link: '/categories/' },
+          { text: 'Label', link: '/tags/' },
+          // { text: '归档', link: '/archives/' },
         ],
       },
     ],
