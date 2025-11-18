@@ -51,6 +51,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 text: 'TypeScript',
                 link: '/pages/51afd6/',
               },
+              {
+                text: 'CSS',
+                link: '/pages/c8f128/',
+              },
             ],
           },
         ],
