@@ -53,7 +53,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
               },
               {
                 text: 'CSS',
-                link: '/pages/c8f128/',
+                link: '/pages/74eb55/',
               },
             ],
           },
