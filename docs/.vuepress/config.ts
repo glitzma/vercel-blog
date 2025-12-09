@@ -48,6 +48,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 link: '/note/git/',
               },
               {
+                text: '《Vite》',
+                link: '/note/vite/',
+              },
+              {
                 text: 'TypeScript',
                 link: '/pages/51afd6/',
               },
