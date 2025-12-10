@@ -52,6 +52,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 link: '/note/vite/',
               },
               {
+                text: '《Vue3》',
+                link: '/note/vue3/',
+              },
+              {
                 text: 'TypeScript',
                 link: '/pages/51afd6/',
               },
