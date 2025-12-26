@@ -38,11 +38,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             text: '学习手册',
             items: [
               { text: '《JavaScript教程》', link: '/note/javascript/' },
-              { text: '《ES6 教程》', link: '/note/es6/' },
-              {
-                text: '《TypeScript 从零实现 axios》',
-                link: '/note/typescript-axios/',
-              },
               {
                 text: '《Git》',
                 link: '/note/git/',
@@ -56,12 +51,21 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 link: '/note/vue3/',
               },
               {
-                text: 'TypeScript',
+                text: '《TypeScript》',
                 link: '/pages/51afd6/',
               },
               {
-                text: 'CSS',
+                text: '《CSS》',
                 link: '/pages/74eb55/',
+              },
+              {
+                text: '《Tailwind CSS》',
+                link: '/pages/ac529e/',
+              },
+              { text: '《ES6 教程》', link: '/note/es6/' },
+              {
+                text: '《TypeScript 从零实现 axios》',
+                link: '/note/typescript-axios/',
               },
             ],
           },
