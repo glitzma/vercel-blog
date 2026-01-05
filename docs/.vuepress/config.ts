@@ -38,6 +38,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             text: '学习手册',
             items: [
               { text: '《JavaScript教程》', link: '/note/javascript/' },
+              { text: '《TypeScript教程》', link: '/note/typescript/' },
               {
                 text: '《Git》',
                 link: '/note/git/',
