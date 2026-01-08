@@ -190,7 +190,7 @@ export default {
       mark: 0,
 
       total: 0, // 总长
-      perPage: 10, // 每页长
+      perPage: 80, // 每页长
       currentPage: 1// 当前页
     }
   },
