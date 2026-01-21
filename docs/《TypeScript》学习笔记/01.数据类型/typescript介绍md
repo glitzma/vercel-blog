@@ -8,7 +8,7 @@ tags:
   - 
 author: 
   name: mamingjuan
-  link: https://github.com/glitzma
+  link: https://github.com/happy760690
 ---
 
 下面给你一份**TypeScript 基础介绍（偏实战、前端向）**。结合你之前在学 **Vue3 / React / shadcn/ui**，我会重点放在**前端最常用、最容易踩坑的 TS 能力**上。

@@ -90,7 +90,7 @@ var config_default = defineConfig4CustomTheme({
     sidebar: "structuring",
     author: {
       name: "Glitz Ma",
-      link: "https://github.com/glitzma"
+      link: "https://github.com/happy760690"
     },
     blogger: {
       avatar: "https://avatars.githubusercontent.com/u/49772593?v=4",
@@ -123,7 +123,7 @@ var config_default = defineConfig4CustomTheme({
     extendFrontmatter: {
       author: {
         name: "mamingjuan",
-        link: "https://github.com/glitzma"
+        link: "https://github.com/happy760690"
       }
     }
   },

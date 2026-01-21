@@ -165,7 +165,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
     author: {
       name: 'Glitz Ma', // 必需
-      link: 'https://github.com/glitzma', // 可选的
+      link: 'https://github.com/happy760690', // 可选的
     },
 
     // 博主信息 (显示在首页侧边栏)
@@ -208,7 +208,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     extendFrontmatter: {
       author: {
         name: 'mamingjuan',
-        link: 'https://github.com/glitzma'
+        link: 'https://github.com/happy760690'
       }
     },
 
