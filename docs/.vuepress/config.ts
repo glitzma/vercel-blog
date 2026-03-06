@@ -64,10 +64,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
               },
               { text: '《JavaScript教程》', link: '/note/javascript/' },
               { text: '《ES6 教程》', link: '/note/es6/' },
-              {
-                text: '《TypeScript 从零实现 axios》',
-                link: '/note/typescript-axios/',
-              },
+              // {
+              //   text: '《TypeScript 从零实现 axios》',
+              //   link: '/note/typescript-axios/',
+              // },
             ],
           },
         ],
