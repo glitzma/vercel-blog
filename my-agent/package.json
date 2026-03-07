@@ -1,0 +1,16 @@
+{
+  "name": "my-agent",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "npx tsx src/index.ts"
+  },
+  "dependencies": {
+    "@openai/agents": "latest",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "tsx": "latest",
+    "typescript": "^5.0.0"
+  }
+}
