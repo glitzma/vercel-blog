@@ -1,0 +1,20 @@
+/* @import "tailwindcss"; */
+
+/* .vitepress/theme/style.css */
+.prose {
+  max-width: 768px;
+  line-height: 1.75;
+}
+
+.prose h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.prose p {
+  color: #444;
+}
+:root {
+  --vp-c-brand-1: #646cff;
+  --vp-c-brand-2: #747bff;
+}

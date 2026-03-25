@@ -1,28 +1,61 @@
 ---
-home: true
-# heroImage: /img/web.png
-heroText: Glittering's blog
-# tagline: 非学，无以致疑; 非问，无以广识;
-# actionText: 立刻进入 →
-# actionLink: /web/
-# bannerBg: auto # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
-bodyBgImg: ['/img/bg.jpg', '/img/bg2.jpg', '/img/bg3.jpg']
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
 
-features: # 可选的
-  - title: 基础知识
-    details: JavaScript、TypeScript、CSS、Vue、React框架等前端技术
-    link: /web/ # 可选
-    imgUrl: /img/ui.png # 可选
-  # - title: 页面
-  #   details: html(5)/css(3)，前端页面相关技术
-  #   link: /ui/
-    # imgUrl: /img/ui.png
-  - title: 技术总结
-    details: 技术文档、算法、教程、技巧、总结等文章
-    link: /technology/
-    imgUrl: /img/other.png
-# 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
-# postList: detailed
-# simplePostListLength: 10 # 简约版文章列表显示的文章数量，默认10。（仅在postList设置为simple时生效）
-# hideRightBar: true # 是否隐藏右侧边栏
+hero:
+  name: "Glittering's blog"
+  text: "Frontend Blog"
+  tagline: Notes, guides, and deep dives on modern frontend engineering
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /basic-knowledge/typescript-learn/01.data-types/00.typescript-introduction
+
+features:
+  - title: TypeScript
+    details: Type system fundamentals, generics, interfaces, structural typing, and module declarations.
+    link: /basic-knowledge/typescript-learn/01.data-types/00.typescript-introduction
+  - title: Vue3
+    details: Composition API, reactivity system, component patterns, and Vue3 internals.
+    link: /basic-knowledge/vue3/02.vue3-learning-path
+  - title: React
+    details: React fundamentals, Hooks internals, Fiber architecture, and ecosystem libraries.
+    link: /basic-knowledge/react/01.react-basics/05.react-basics
+  - title: Tailwind CSS
+    details: Utility-first CSS, responsive design, and integrating Tailwind with component libraries.
+    link: /basic-knowledge/tailwind-css/23.tailwind-css-basics
+  - title: Vite
+    details: Vite architecture, plugin system, HMR internals, virtual modules, and build optimization.
+    link: /basic-knowledge/vite/41.vite-intro-to-mastery
+  - title: Git
+    details: Common commands, branching strategies, rebase, history rewriting, and workflow guides.
+    link: /basic-knowledge/git/10.manual/00.git-common-commands
+  - title: CSS
+    details: Box model, BFC/IFC, flexbox, grid, animations, performance, and mobile adaptation.
+    link: /basic-knowledge/CSS/00.css-tutorials-and-tips
+  - title: AI Related
+    details: LLM foundations, transformer architecture, RAG, agent design, and context engineering.
+    link: /basic-knowledge/AI-related/60.agent-skills
+  - title: GIS
+    details: GIS fundamentals, spatial indexing, Cesium, OpenLayers, Mapbox, and rendering large datasets.
+    link: /basic-knowledge/gis/69.gis-fundamentals
+  - title: Postgres
+    details: PostgreSQL basics, data types, queries, indexes, and practical database patterns.
+    link: /basic-knowledge/postgres/83.postgres-basics
+  - title: SEO
+    details: Search engine principles, on-page SEO, crawling, and indexing strategies for web apps.
+    link: /basic-knowledge/seo/85.seo-learning
+  - title: Tech Docs
+    details: Nginx, Linux shell, HTTP, Docker, and other infrastructure and tooling references.
+    link: /other/01.tech-docs/01.nginx-proxy
+  - title: Algorithms
+    details: Common algorithm patterns and data structure problems with practical solutions.
+    link: /other/04.algorithms/02.seek
+  - title: Work Notes
+    details: Engineering notes on browser rendering, security, performance, WebAssembly, and more.
+    link: /other/05.work-notes/01.timezone-offset
+  - title: Practical Tips
+    details: GitHub search tricks, Chrome extensions, Mac shortcuts, and curated dev resources.
+    link: /other/10.practical-tips/01.github-search-tips
 ---
+
