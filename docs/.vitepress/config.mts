@@ -8,7 +8,7 @@ export default defineConfig({
   vite: {
     // plugins: [tailwindcss()]
   },
-  lastUpdated: false,
+  lastUpdated: true,
   title: "Glittering's blog",
   description: "A VitePress Site",
   themeConfig: {
@@ -23,7 +23,7 @@ export default defineConfig({
 
     footer: {
       // message: 'Released under the MIT License.',
-      copyright: "Copyright © 2026",
+      copyright: "Copyright © 2015 - 2026",
     },
   },
 });
