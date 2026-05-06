@@ -55,7 +55,6 @@ export const sidebar: DefaultTheme.Sidebar = {
     {
       text: "Data Types",
       items: [
-        { text: "TypeScript Introduction", link: "/basic-knowledge/typescript-learn/01.data-types/00.typescript-introduction" },
         { text: "Intro to TS Data Types", link: "/basic-knowledge/typescript-learn/01.data-types/02.intro-typescript-data-types" },
         { text: "TypeScript Classes", link: "/basic-knowledge/typescript-learn/01.data-types/03.typescript-classes" },
         { text: "TypeScript Interfaces", link: "/basic-knowledge/typescript-learn/01.data-types/04.typescript-interfaces" },

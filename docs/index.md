@@ -9,12 +9,12 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /basic-knowledge/typescript-learn/01.data-types/00.typescript-introduction
+      link: /basic-knowledge/typescript-learn/01.data-types/02.intro-typescript-data-types
 
 features:
   - title: TypeScript
     details: Type system fundamentals, generics, interfaces, structural typing, and module declarations.
-    link: /basic-knowledge/typescript-learn/01.data-types/00.typescript-introduction
+    link: /basic-knowledge/typescript-learn/01.data-types/02.intro-typescript-data-types
   - title: Vue3
     details: Composition API, reactivity system, component patterns, and Vue3 internals.
     link: /basic-knowledge/vue3/02.vue3-learning-path

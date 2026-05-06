@@ -7,6 +7,8 @@ pnpm-lock.yaml
 yarn.lock
 package-lock.json
 
+.claude
+
 # VitePress / Vite
 dist/
 .npm/

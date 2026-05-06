@@ -7,7 +7,7 @@ export const nav: DefaultTheme.NavItem[] = [
     items: [
       { text: 'CSS', link: '/basic-knowledge/CSS/00.css-tutorials-and-tips' },
       { text: 'Tailwind CSS', link: '/basic-knowledge/tailwind-css/23.tailwind-css-basics' },
-      { text: 'TypeScript', link: '/basic-knowledge/typescript-learn/01.data-types/00.typescript-introduction' },
+      { text: 'TypeScript', link: '/basic-knowledge/typescript-learn/01.data-types/02.intro-typescript-data-types' },
       { text: 'Vue3', link: '/basic-knowledge/vue3/02.vue3-learning-path' },
       { text: 'React', link: '/basic-knowledge/react/01.react-basics/05.react-basics' },
       { text: 'Git', link: '/basic-knowledge/git/10.manual/00.git-common-commands' },
