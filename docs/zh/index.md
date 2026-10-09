@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Glittering 的博客"
+  name: "Maggie 的博客"
   text: "前端技术博客"
   tagline: 记录现代前端工程的学习笔记、实用指南与原理解析
   actions:

@@ -10,7 +10,7 @@ export default defineConfig({
     // plugins: [tailwindcss()]
   },
   lastUpdated: true,
-  title: "Glittering's blog",
+  title: "Maggie's blog",
   lang: "en-US",
   description: "Notes, guides, and deep dives on modern frontend engineering",
   markdown: {
@@ -46,7 +46,7 @@ export default defineConfig({
     zh: {
       label: "简体中文",
       lang: "zh-CN",
-      title: "Glittering 的博客",
+      title: "Maggie 的博客",
       description: "现代前端工程的学习笔记、实用指南与原理解析",
       themeConfig: chineseTheme,
     },

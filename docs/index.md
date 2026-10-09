@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Glittering's blog"
+  name: "Maggie's blog"
   text: "Frontend Blog"
   tagline: Notes, guides, and deep dives on modern frontend engineering
   actions:
