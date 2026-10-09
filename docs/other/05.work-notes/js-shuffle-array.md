@@ -1,5 +1,5 @@
 ---
-title: JS随机打乱数组
+title: "JS randomly scrambles arrays"
 date: 2015-02-08 17:42:03
 permalink: /pages/40b4db2d38ba85f2
 categories: 
@@ -11,7 +11,7 @@ author:
   name: mamingjuan
   link: https://github.com/happy760690
 ---
-# JS随机打乱数组
+# JS randomly scrambles arrays {#js随机打乱数组}
 
 ```js
 function shuffle(arr) { // 随机打乱数组

@@ -1,21 +1,23 @@
 <script setup lang="ts">
-import { withBase } from 'vitepress'
+import { useData, withBase } from 'vitepress'
+
+const { theme, lang } = useData()
 </script>
 
 <template>
   <div class="not-found">
     <div class="container">
       <h1 class="error-code">404</h1>
-      <h2 class="error-title">页面未找到</h2>
-      <p class="error-desc">抱歉，您访问的页面不存在或已被移除</p>
-      <a :href="withBase('/')" class="back-home">返回首页</a>
+      <h2 class="error-title">{{ theme.notFound.title }}</h2>
+      <p class="error-desc">{{ theme.notFound.quote }}</p>
+      <a :href="withBase(lang === 'zh-CN' ? '/zh/' : '/')" class="back-home">{{ theme.notFound.linkText }}</a>
     </div>
   </div>
 </template>
 
 <style scoped>
 .not-found {
-  min-height: 100vh;
+  min-height: calc(100vh - var(--vp-nav-height) - 100px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,7 +54,7 @@ import { withBase } from 'vitepress'
 .back-home {
   display: inline-block;
   padding: 0.6rem 1.5rem;
-  background: var(--vp-c-brand);
+  background: var(--vp-c-brand-1);
   color: var(--vp-c-white);
   border-radius: 6px;
   text-decoration: none;
@@ -61,6 +63,6 @@ import { withBase } from 'vitepress'
 }
 
 .back-home:hover {
-  background: var(--vp-c-brand-dark1);
+  background: var(--vp-c-brand-2);
 }
 </style>

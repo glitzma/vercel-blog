@@ -1,16 +1,10 @@
 {
+  "buildCommand": "npm run docs:build",
+  "outputDirectory": "docs/.vitepress/dist",
+  "framework": null,
   "headers": [
     {
-      "source": "/assets/js/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/assets/css/(.*)",
+      "source": "/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -21,6 +15,5 @@
   ],
   "github": {
     "enabled": true
-  },
-  "rewrites": [{ "source": "/:path*", "destination": "/docs/.vuepress/dist/index.html" }]
+  }
 }

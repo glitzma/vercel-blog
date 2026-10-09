@@ -18,3 +18,25 @@
   --vp-c-brand-1: #646cff;
   --vp-c-brand-2: #747bff;
 }
+
+:root[lang="zh-CN"] {
+  --vp-code-copy-copied-text-content: '已复制';
+}
+
+/* The visible switch is available at every screen size. */
+.VPNavBarTranslations,
+.VPNavScreenTranslations {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .VPNavBar > .wrapper > .container > .title {
+    min-width: 0;
+    flex-shrink: 1;
+  }
+  .VPNavBarTitle .title span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

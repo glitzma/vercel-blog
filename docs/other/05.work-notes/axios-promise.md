@@ -1,5 +1,5 @@
 ---
-title: axios 与 promise
+title: "axios and promises"
 date: 2018-06-07 00:00:00
 permalink: /pages/e44648/
 categories: 
@@ -14,18 +14,18 @@ author:
 
 ## axios
 
-axios是基于promise的http库，可以用于浏览器和node.js中
+axios is a promise-based http library that can be used in browsers and node.js
 
-- 从浏览器中创建 XMLHttpRequests
-- 从 node.js 创建 http 请求
-- 支持 Promise API
-- 拦截请求和响应
-- 转换请求数据和响应数据
-- 取消请求
-- 自动转换 JSON 数据
-- 客户端支持防御 XSRF
+- Create XMLHttpRequests from the browser
+- Create http request from node.js
+- Support Promise API
+- Intercept requests and responses
+- Convert request data and response data
+- Cancel request
+- Automatically convert JSON data
+- Client support for defending against XSRF
 
-##  promise 用法文档
+##  promise usage documentation {#promise-用法文档}
 
 [http://liubin.org/promises-book/#chapter1-what-is-promise](http://liubin.org/promises-book/#chapter1-what-is-promise)
 
@@ -35,7 +35,7 @@ axios是基于promise的http库，可以用于浏览器和node.js中
 
 ### promise 
 
-### 多个请求并列
+### Multiple requests in parallel {#多个请求并列}
 
 ```js
 async tidyData(){
@@ -67,8 +67,8 @@ var asyncIterable = {
 })();
 ```
 
-###  N个并发请求
-帮助函数处理并发请求。
+###  N concurrent requests {#n个并发请求}
+Helper function to handle concurrent requests.
 
 ```sh
 axios.all（iterable）
@@ -127,7 +127,7 @@ addTask(300, '7')
 //  2314
 ```
 
-## 执行多个并发请求
+## Execute multiple concurrent requests {#执行多个并发请求}
 
 ```javascript
 function getUserAccount() {
@@ -148,7 +148,7 @@ axios.all([getUserAccount(), getUserPermissions()])
 
 ```
 
-## fetch操纵http管道
+## fetch manipulates http pipes {#fetch操纵http管道}
 
 ```javascript
 fetch({
@@ -161,5 +161,5 @@ fetch({
 
 ## axios、fetch、ajax(jquery)
 
-axios与fetch是基于promise形式，ajax是callback形式         
-fetch 脱离了xhr是新语法，默认不传cookie，不能像xhr监听请求进度
+axios and fetch are based on promise, and ajax is on callback.\
+fetch is a new syntax that breaks away from xhr. It does not pass cookies by default and cannot monitor the request progress like xhr.

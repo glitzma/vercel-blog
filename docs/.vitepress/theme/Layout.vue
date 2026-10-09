@@ -2,27 +2,31 @@
 import DefaultTheme from 'vitepress/theme'
 import { useData } from 'vitepress'
 import NotFound from './NotFound.vue'
-import { computed } from 'vue'
+import LanguageSwitcher from './components/LanguageSwitcher.vue'
 
-const { page } = useData()
+const { page, lang } = useData()
 
 const formatDate = (dateStr: string) => {
   if (!dateStr) return ''
-  const date = new Date(dateStr)
-  return date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })
+  const normalized = /^\d{4}-\d{2}-\d{2}/.test(dateStr)
+    ? dateStr.slice(0, 10) + 'T00:00:00+08:00'
+    : dateStr
+  const date = new Date(normalized)
+  return date.toLocaleDateString(lang.value, { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Shanghai' })
 }
-
-const lastUpdatedDate = computed(() => {
-  return page.value.lastUpdated ? new Date(page.value.lastUpdated).toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' }) : null
-})
 </script>
 
 <template>
-  <NotFound v-if="page.isNotFound"/>
-  <DefaultTheme.Layout v-else>
+  <DefaultTheme.Layout>
+    <template #nav-bar-content-after>
+      <LanguageSwitcher />
+    </template>
+    <template #not-found>
+      <NotFound />
+    </template>
     <template #doc-before>
       <div class="doc-date-info" v-if="page.frontmatter.date || page.lastUpdated" style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--vp-c-divider);">
-        <span v-if="page.frontmatter.date">创建时间: {{ formatDate(page.frontmatter.date) }}</span>
+        <span v-if="page.frontmatter.date">{{ lang === 'zh-CN' ? '创建时间' : 'Created' }}: {{ formatDate(page.frontmatter.date) }}</span>
       </div>
     </template>
   </DefaultTheme.Layout>

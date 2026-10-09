@@ -1,5 +1,5 @@
 ---
-title: 非常实用的JavaScript一行代码
+title: "A very useful one-line JavaScript code"
 date: 2016-11-02 09:51:37
 permalink: /pages/a61298/
 categories:
@@ -10,11 +10,11 @@ tags:
 author: CUGGZ
 ---
 
-## 一、日期处理
+## 1\. Date processing {#一、日期处理}
 
-### 1. 检察日期是否有效
+### 1. Is the inspection date valid? {#_1-检察日期是否有效}
 
-该方法用于检测给出的日期是否有效：
+This method is used to check whether the given date is valid:
 
 ```javascript
 const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
@@ -23,9 +23,9 @@ isDateValid("December 17, 1995 03:24:00");  // true
 复制代码
 ```
 
-### 2. 计算两个日期之间的间隔
+### 2. Calculate the interval between two dates {#_2-计算两个日期之间的间隔}
 
-该方法用于计算两个日期之间的间隔时间：
+This method is used to calculate the time between two dates:
 
 ```javascript
 const dayDif = (date1, date2) => Math.ceil(Math.abs(date1.getTime() - date2.getTime()) / 86400000)
@@ -34,11 +34,11 @@ dayDif(new Date("2021-11-3"), new Date("2022-2-1"))  // 90
 复制代码
 ```
 
-距离过年还有90天~
+There are still 90 days until Chinese New Year~
 
-### 3. 查找日期位于一年中的第几天
+### 3. Find the day of the year a date falls on {#_3-查找日期位于一年中的第几天}
 
-该方法用于检测给出的日期位于今年的第几天：
+This method is used to detect what day of the year a given date falls:
 
 ```javascript
 const dayOfYear = (date) => Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
@@ -47,11 +47,11 @@ dayOfYear(new Date());   // 307
 复制代码
 ```
 
-2021年已经过去300多天了~
+More than 300 days have passed in 2021~
 
-### 4. 时间格式化
+### 4. time formatting {#_4-时间格式化}
 
-该方法可以用于将时间转化为hour:minutes:seconds的格式：
+This method can be used to convert time into hour:minutes:seconds format:
 
 ```javascript
 const timeFromDate = date => date.toTimeString().slice(0, 8);
@@ -61,11 +61,11 @@ timeFromDate(new Date());  // 返回当前时间 09:00:00
 复制代码
 ```
 
-## 二、字符串处理
+## 2\. String processing {#二、字符串处理}
 
-### 1. 字符串首字母大写
+### 1. Capitalize the first letter of a string {#_1-字符串首字母大写}
 
-该方法用于将英文字符串的首字母大写处理：
+This method is used to capitalize the first letter of an English string:
 
 ```javascript
 const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
@@ -74,9 +74,9 @@ capitalize("hello world")  // Hello world
 复制代码
 ```
 
-### 2. 翻转字符串
+### 2. flip string {#_2-翻转字符串}
 
-该方法用于将一个字符串进行翻转操作，返回翻转后的字符串：
+This method is used to flip a string and return the flipped string:
 
 ```javascript
 const reverse = str => str.split('').reverse().join('');
@@ -85,9 +85,9 @@ reverse('hello world');   // 'dlrow olleh'
 复制代码
 ```
 
-### 3. 随机字符串
+### 3. random string {#_3-随机字符串}
 
-该方法用于生成一个随机的字符串：
+This method is used to generate a random string:
 
 ```javascript
 const randomString = () => Math.random().toString(36).slice(2);
@@ -96,9 +96,9 @@ randomString();
 复制代码
 ```
 
-### 4. 截断字符串
+### 4. truncate string {#_4-截断字符串}
 
-该方法可以从指定长度处截断字符串:
+This method truncates a string at a specified length:
 
 ```javascript
 const truncateString = (string, length) => string.length < length ? string : `${string.slice(0, length - 3)}...`;
@@ -107,20 +107,20 @@ truncateString('Hi, I should be truncated because I am too loooong!', 36)   // '
 复制代码
 ```
 
-### 5. 去除字符串中的HTML
+### 5. Remove HTML from string {#_5-去除字符串中的html}
 
-该方法用于去除字符串中的HTML元素：
+This method is used to remove HTML elements from a string:
 
 ```javascript
 const stripHtml = html => (new DOMParser().parseFromString(html, 'text/html')).body.textContent || '';
 复制代码
 ```
 
-## 三、数组处理
+## 3\. Array processing {#三、数组处理}
 
-### 1. 从数组中移除重复项
+### 1. Remove duplicates from array {#_1-从数组中移除重复项}
 
-该方法用于移除数组中的重复项：
+This method is used to remove duplicates from an array:
 
 ```javascript
 const removeDuplicates = (arr) => [...new Set(arr)];
@@ -129,9 +129,9 @@ console.log(removeDuplicates([1, 2, 2, 3, 3, 4, 4, 5, 5, 6]));
 复制代码
 ```
 
-### 2. 判断数组是否为空
+### 2. Determine whether the array is empty {#_2-判断数组是否为空}
 
-该方法用于判断一个数组是否为空数组，它将返回一个布尔值：
+This method is used to determine whether an array is an empty array. It will return a Boolean value:
 
 ```javascript
 const isNotEmpty = arr => Array.isArray(arr) && arr.length > 0;
@@ -140,9 +140,9 @@ isNotEmpty([1, 2, 3]);  // true
 复制代码
 ```
 
-### 3. 合并两个数组
+### 3. Merge two arrays {#_3-合并两个数组}
 
-可以使用下面两个方法来合并两个数组：
+You can use the following two methods to merge two arrays:
 
 ```javascript
 const merge = (a, b) => a.concat(b);
@@ -151,11 +151,11 @@ const merge = (a, b) => [...a, ...b];
 复制代码
 ```
 
-## 四、数字操作
+## 4\. Digital operations {#四、数字操作}
 
-### 1. 判断一个数是奇数还是偶数
+### 1. Determine whether a number is odd or even {#_1-判断一个数是奇数还是偶数}
 
-该方法用于判断一个数字是奇数还是偶数：
+This method is used to determine whether a number is odd or even:
 
 ```javascript
 const isEven = num => num % 2 === 0;
@@ -164,7 +164,7 @@ isEven(996);
 复制代码
 ```
 
-### 2. 获得一组数的平均值
+### 2. Get the average of a set of numbers {#_2-获得一组数的平均值}
 
 ```javascript
 const average = (...args) => args.reduce((a, b) => a + b) / args.length;
@@ -173,9 +173,9 @@ average(1, 2, 3, 4, 5);   // 3
 复制代码
 ```
 
-### 3. 获取两个整数之间的随机整数
+### 3. Get a random integer between two integers {#_3-获取两个整数之间的随机整数}
 
-该方法用于获取两个整数之间的随机整数
+This method is used to get a random integer between two integers
 
 ```javascript
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
@@ -184,9 +184,9 @@ random(1, 50);
 复制代码
 ```
 
-### 4. 指定位数四舍五入
+### 4. Round to specified digits {#_4-指定位数四舍五入}
 
-该方法用于将一个数字按照指定位进行四舍五入：
+This method is used to round a number to the specified number of places:
 
 ```javascript
 const round = (n, d) => Number(Math.round(n + "e" + d) + "e-" + d)
@@ -196,11 +196,11 @@ round(1.555, 2) //1.56
 复制代码
 ```
 
-## 五、颜色操作
+## 5\. Color operation {#五、颜色操作}
 
-### 1. 将RGB转化为十六机制
+### 1. Convert RGB to sixteen mechanism {#_1-将rgb转化为十六机制}
 
-该方法可以将一个RGB的颜色值转化为16进制值：
+This method can convert an RGB color value into a hexadecimal value:
 
 ```javascript
 const rgbToHex = (r, g, b) => "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
@@ -209,9 +209,9 @@ rgbToHex(255, 255, 255);  // '#ffffff'
 复制代码
 ```
 
-### 2. 获取随机十六进制颜色
+### 2. Get random hex color {#_2-获取随机十六进制颜色}
 
-该方法用于获取一个随机的十六进制颜色值：
+This method is used to obtain a random hexadecimal color value:
 
 ```javascript
 const randomHex = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0")}`;
@@ -220,11 +220,11 @@ randomHex();
 复制代码
 ```
 
-## 六、浏览器操作
+## 6\. Browser operation {#六、浏览器操作}
 
-### 1. 复制内容到剪切板
+### 1. Copy content to clipboard {#_1-复制内容到剪切板}
 
-该方法使用 navigator.clipboard.writeText 来实现将文本复制到剪贴板：
+This method uses navigator.clipboard.writeText to copy text to the clipboard:
 
 ```javascript
 const copyToClipboard = (text) => navigator.clipboard.writeText(text);
@@ -233,18 +233,18 @@ copyToClipboard("Hello World");
 复制代码
 ```
 
-### 2. 清除所有cookie
+### 2. Clear all cookies {#_2-清除所有cookie}
 
-该方法可以通过使用 document.cookie 来访问 cookie 并清除存储在网页中的所有 cookie：
+This method accesses cookies and clears all cookies stored in the web page by using document.cookie:
 
 ```javascript
 const clearCookies = document.cookie.split(';').forEach(cookie => document.cookie = cookie.replace(/^ +/, '').replace(/=.*/, `=;expires=${new Date(0).toUTCString()};path=/`));
 复制代码
 ```
 
-### 3. 获取选中的文本
+### 3. Get selected text {#_3-获取选中的文本}
 
-该方法通过内置的 getSelection 属性获取用户选择的文本：
+This method gets the text selected by the user through the built-in getSelection property:
 
 ```javascript
 const getSelectedText = () => window.getSelection().toString();
@@ -253,9 +253,9 @@ getSelectedText();
 复制代码
 ```
 
-### 4. 检测是否是黑暗模式
+### 4. Check if it is dark mode {#_4-检测是否是黑暗模式}
 
-该方法用于检测当前的环境是否是黑暗模式，它是一个布尔值：
+This method is used to detect whether the current environment is in dark mode. It is a Boolean value:
 
 ```javascript
 const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -264,9 +264,9 @@ console.log(isDarkMode)
 复制代码
 ```
 
-### 5. 滚动到页面顶部
+### 5. Scroll to top of page {#_5-滚动到页面顶部}
 
-该方法用于在页面中返回顶部：
+This method is used to return to the top of the page:
 
 ```javascript
 const goToTop = () => window.scrollTo(0, 0);
@@ -275,18 +275,18 @@ goToTop();
 复制代码
 ```
 
-### 6. 判断当前标签页是否激活
+### 6. Determine whether the current tab page is active {#_6-判断当前标签页是否激活}
 
-该方法用于检测当前标签页是否已经激活：
+This method is used to detect whether the current tab has been activated:
 
 ```javascript
 const isTabInView = () => !document.hidden;
 复制代码
 ```
 
-### 7. 判断当前是否是苹果设备
+### 7. Determine whether the current device is an Apple device {#_7-判断当前是否是苹果设备}
 
-该方法用于检测当前的设备是否是苹果的设备：
+This method is used to detect whether the current device is an Apple device:
 
 ```javascript
 const isAppleDevice = () => /Mac|iPod|iPhone|iPad/.test(navigator.platform);
@@ -295,18 +295,18 @@ isAppleDevice();
 复制代码
 ```
 
-### 8. 是否滚动到页面底部
+### 8. Whether to scroll to the bottom of the page {#_8-是否滚动到页面底部}
 
-该方法用于判断页面是否已经底部：
+This method is used to determine whether the page has reached the bottom:
 
 ```javascript
 const scrolledToBottom = () => document.documentElement.clientHeight + window.scrollY >= document.documentElement.scrollHeight;
 复制代码
 ```
 
-### 9. 重定向到一个URL
+### 9. Redirect to a URL {#_9-重定向到一个url}
 
-该方法用于重定向到一个新的URL：
+This method is used to redirect to a new URL:
 
 ```javascript
 const redirect = url => location.href = url
@@ -315,20 +315,20 @@ redirect("https://www.google.com/")
 复制代码
 ```
 
-### 10. 打开浏览器打印框
+### 10. Open browser print box {#_10-打开浏览器打印框}
 
-该方法用于打开浏览器的打印框：
+This method is used to open the browser's print box:
 
 ```javascript
 const showPrintDialog = () => window.print()
 复制代码
 ```
 
-## 七、其他操作
+## 7\. Other operations {#七、其他操作}
 
-### 1. 随机布尔值
+### 1. random boolean {#_1-随机布尔值}
 
-该方法可以返回一个随机的布尔值，使用Math.random()可以获得0-1的随机数，与0.5进行比较，就有一半的概率获得真值或者假值。
+This method can return a random Boolean value. Use Math.random() to get a random number from 0 to 1. Compared with 0.5, there is a half probability of getting a true or false value.
 
 ```javascript
 const randomBoolean = () => Math.random() >= 0.5;
@@ -337,18 +337,18 @@ randomBoolean();
 复制代码
 ```
 
-### 2. 变量交换
+### 2. variable exchange {#_2-变量交换}
 
-可以使用以下形式在不适用第三个变量的情况下，交换两个变量的值：
+You can use the following form to swap the values of two variables without using a third variable:
 
 ```javascript
 [foo, bar] = [bar, foo];
 复制代码
 ```
 
-### 3. 获取变量的类型
+### 3. Get the type of variable {#_3-获取变量的类型}
 
-该方法用于获取一个变量的类型：
+This method is used to get the type of a variable:
 
 ```javascript
 const trueTypeOf = (obj) => Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
@@ -364,9 +364,9 @@ trueTypeOf(() => {});  // function
 复制代码
 ```
 
-### 4. 华氏度和摄氏度之间的转化
+### 4. Conversion between Fahrenheit and Celsius {#_4-华氏度和摄氏度之间的转化}
 
-该方法用于摄氏度和华氏度之间的转化：
+This method is used to convert between Celsius and Fahrenheit:
 
 ```javascript
 const celsiusToFahrenheit = (celsius) => celsius * 9/5 + 32;
@@ -380,16 +380,16 @@ fahrenheitToCelsius(32);    // 0
 复制代码
 ```
 
-### 5. 检测对象是否为空
+### 5. Check if the object is empty {#_5-检测对象是否为空}
 
-该方法用于检测一个JavaScript对象是否为空：
+This method is used to detect whether a JavaScript object is empty:
 
 ```javascript
 const isEmpty = obj => Reflect.ownKeys(obj).length === 0 && obj.constructor === Object;
 复制代码
 ```
 
-## 正则基本语法
+## Regular basic syntax {#正则基本语法}
 
 ```
 ^ 匹配一个输入或一行的开头，/^a/匹配"an A"，而不匹配"An a" 
@@ -430,7 +430,7 @@ x|y 匹配x或y
 \un 匹配n，其中n是一个用四个十六进制数字表示的Unicode字符。例如，\u00A9匹配版权符号（©）。
 ```
 
-`.*`与`.*?`的区别是前者是贪婪匹配后者是非贪婪匹配模式。`.+`与`.+?`也是一样
+The difference between `.*` and `.*?` is that the former is a greedy matching mode and the latter is a non-greedy matching mode.The same goes for `.+` and `.+?`
 
 
 ```
@@ -472,28 +472,28 @@ x|y
 
 ```
 
-## 应用总结
+## Application summary {#应用总结}
 
-### 验证连续数字是否有重复
+### Verify whether consecutive numbers are repeated {#验证连续数字是否有重复}
 
 ```js
 "bcae1958fiefadf1958fef".match(/^.*?(\d{4})(?:(?!\1).)*\1/)
 ```
 
-### 验证是否有重复字符
+### Verify if there are duplicate characters {#验证是否有重复字符}
 
 ```js
 
 "bcae1958fiqpdljwrxy".match(/^.*?(\w)(?:(?!\1).)*\1/)
 
 ```
-### ip地址的正则
+### IP address regularity {#ip地址的正则}
 
 ```js
 /^((([1-9]?\d)|(1\d\d)|(2[0-4]\d)|(25[0-5]))\.){3}(([1-9]?\d)|(1\d\d)|(2[0-4]\d)|(25[0-5]))$/.test('0.255.255.0')
 ```
 
-###  12位数字，其中不能出现6位连续相同数字
+###  12 digits, 6 consecutive identical digits cannot appear in it {#_12位数字-其中不能出现6位连续相同数字}
 
 ```js
 
@@ -501,21 +501,21 @@ x|y
 
 ```
 
-### A-Z以内不重复的10个字母
+### 10 non-repeating letters within A-Z {#a-z以内不重复的10个字母}
 
-方法一：
+Method one:
 
 ```js
 ^(?:([A-Z])(?!.*?\1)){10}$
 ```
 
-方法二：
+Method two:
 
 ```js
 'asdfghjklp'.match(/^(?:([a-z])(?=((?!\1).)*$)){10}$/)
 ```
 
-### 千位分隔符(js 实现)
+### Thousands separator (js implementation) {#千位分隔符-js-实现}
 
 ```js
 
@@ -546,5 +546,5 @@ b()();
 
 
 
-> 作者：CUGGZ
-> 链接：https://juejin.cn/post/7025771605422768159
+> Author: CUGGZ
+> Link: https://juejin.cn/post/7025771605422768159

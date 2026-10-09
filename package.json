@@ -2,7 +2,10 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "docs:translate": "python3 scripts/translate-google.py",
+    "docs:validate-i18n": "node scripts/validate-i18n.mjs && PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate-i18n.py",
+    "test:i18n": "node --experimental-strip-types --test tests/locale-links.test.mjs && PYTHONDONTWRITEBYTECODE=1 python3 tests/google-translation.test.py"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.2",
