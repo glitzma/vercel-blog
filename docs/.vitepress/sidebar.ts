@@ -214,6 +214,57 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: "RAG vs Agent", link: "/basic-knowledge/AI-related/65.rag-vs-agent" },
         { text: "Context Engineering", link: "/basic-knowledge/AI-related/66.context-engineering" },
         { text: "Harness Engineering", link: "/basic-knowledge/AI-related/67.harness-engineering" },
+        { text: "RAG Learning Plan", link: "/basic-knowledge/AI-related/68.rag-learning-plan" },
+      ],
+    },
+    {
+      text: "RAG Course",
+      items: [
+        { text: "Practice Pack", link: "/basic-knowledge/AI-related/rag-course/materials" },
+        {
+          text: "RAG Week 1: Foundations",
+          collapsed: false,
+          items: [
+            { text: "Lesson 01: What language models can do and why they make mistakes", link: "/basic-knowledge/AI-related/rag-course/01.llm-capabilities" },
+            { text: "Lesson 02: Prompts and context for clear instructions", link: "/basic-knowledge/AI-related/rag-course/02.prompt-and-context" },
+            { text: "Lesson 03: Why models need external information", link: "/basic-knowledge/AI-related/rag-course/03.external-knowledge" },
+            { text: "Lesson 04: Understand RAG through a library question", link: "/basic-knowledge/AI-related/rag-course/04.rag-workflow" },
+            { text: "Lesson 05: How RAG relates to training and agents", link: "/basic-knowledge/AI-related/rag-course/05.rag-training-and-agents" },
+          ],
+        },
+        {
+          text: "RAG Week 2: Documents and Retrieval",
+          collapsed: true,
+          items: [
+            { text: "Lesson 06: Prepare information for questions and answers", link: "/basic-knowledge/AI-related/rag-course/06.prepare-documents" },
+            { text: "Lesson 07: How to split documents into chunks", link: "/basic-knowledge/AI-related/rag-course/07.chunking" },
+            { text: "Lesson 08: Embeddings as numerical representations of text", link: "/basic-knowledge/AI-related/rag-course/08.embeddings" },
+            { text: "Lesson 09: Keyword and semantic search", link: "/basic-knowledge/AI-related/rag-course/09.keyword-and-semantic-search" },
+            { text: "Lesson 10: Indexes, Top-k, and source information", link: "/basic-knowledge/AI-related/rag-course/10.index-top-k-and-sources" },
+          ],
+        },
+        {
+          text: "RAG Week 3: Evidence-based Answers",
+          collapsed: true,
+          items: [
+            { text: "Lesson 11: How to ask answerable knowledge-base questions", link: "/basic-knowledge/AI-related/rag-course/11.ask-answerable-questions" },
+            { text: "Lesson 12: Check retrieved evidence before the answer", link: "/basic-knowledge/AI-related/rag-course/12.check-retrieved-evidence" },
+            { text: "Lesson 13: Write a prompt for evidence-based answers", link: "/basic-knowledge/AI-related/rag-course/13.evidence-based-prompts" },
+            { text: "Lesson 14: Handle missing and conflicting evidence", link: "/basic-knowledge/AI-related/rag-course/14.missing-and-conflicting-evidence" },
+            { text: "Lesson 15: Complete an auditable RAG experiment", link: "/basic-knowledge/AI-related/rag-course/15.auditable-rag-experiment" },
+          ],
+        },
+        {
+          text: "RAG Week 4: Evaluation and Improvement",
+          collapsed: true,
+          items: [
+            { text: "Lesson 16: Build a test set for RAG", link: "/basic-knowledge/AI-related/rag-course/16.build-a-test-set" },
+            { text: "Lesson 17: How to evaluate retrieval", link: "/basic-knowledge/AI-related/rag-course/17.evaluate-retrieval" },
+            { text: "Lesson 18: How to evaluate generated answers", link: "/basic-knowledge/AI-related/rag-course/18.evaluate-answers" },
+            { text: "Lesson 19: Why hybrid search and reranking help", link: "/basic-knowledge/AI-related/rag-course/19.hybrid-search-and-reranking" },
+            { text: "Lesson 20: Improve RAG from failure cases", link: "/basic-knowledge/AI-related/rag-course/20.improve-from-failures" },
+          ],
+        },
       ],
     },
   ],
