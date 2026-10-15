@@ -20,7 +20,6 @@ This method is used to check whether the given date is valid:
 const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
 
 isDateValid("December 17, 1995 03:24:00");  // true
-复制代码
 ```
 
 ### 2. Calculate the interval between two dates {#_2-计算两个日期之间的间隔}
@@ -31,20 +30,21 @@ This method is used to calculate the time between two dates:
 const dayDif = (date1, date2) => Math.ceil(Math.abs(date1.getTime() - date2.getTime()) / 86400000)
 
 dayDif(new Date("2021-11-3"), new Date("2022-2-1"))  // 90
-复制代码
 ```
 
 There are still 90 days until Chinese New Year~
 
 ### 3. Find the day of the year a date falls on {#_3-查找日期位于一年中的第几天}
 
-This method is used to detect what day of the year a given date falls:
+Calculate the ordinal from local calendar fields, using UTC date differences to avoid daylight-saving shifts.
 
 ```javascript
-const dayOfYear = (date) => Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+const dayOfYear = date => Math.floor(
+  (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) -
+   Date.UTC(date.getFullYear(), 0, 0)) / 86400000
+);
 
 dayOfYear(new Date());   // 307
-复制代码
 ```
 
 More than 300 days have passed in 2021~
@@ -58,7 +58,6 @@ const timeFromDate = date => date.toTimeString().slice(0, 8);
 
 timeFromDate(new Date(2021, 11, 2, 12, 30, 0));  // 12:30:00
 timeFromDate(new Date());  // 返回当前时间 09:00:00
-复制代码
 ```
 
 ## 2\. String processing {#二、字符串处理}
@@ -71,7 +70,6 @@ This method is used to capitalize the first letter of an English string:
 const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
 
 capitalize("hello world")  // Hello world
-复制代码
 ```
 
 ### 2. flip string {#_2-翻转字符串}
@@ -82,7 +80,6 @@ This method is used to flip a string and return the flipped string:
 const reverse = str => str.split('').reverse().join('');
 
 reverse('hello world');   // 'dlrow olleh'
-复制代码
 ```
 
 ### 3. random string {#_3-随机字符串}
@@ -93,7 +90,6 @@ This method is used to generate a random string:
 const randomString = () => Math.random().toString(36).slice(2);
 
 randomString();
-复制代码
 ```
 
 ### 4. truncate string {#_4-截断字符串}
@@ -104,7 +100,6 @@ This method truncates a string at a specified length:
 const truncateString = (string, length) => string.length < length ? string : `${string.slice(0, length - 3)}...`;
 
 truncateString('Hi, I should be truncated because I am too loooong!', 36)   // 'Hi, I should be truncated because...'
-复制代码
 ```
 
 ### 5. Remove HTML from string {#_5-去除字符串中的html}
@@ -113,7 +108,6 @@ This method is used to remove HTML elements from a string:
 
 ```javascript
 const stripHtml = html => (new DOMParser().parseFromString(html, 'text/html')).body.textContent || '';
-复制代码
 ```
 
 ## 3\. Array processing {#三、数组处理}
@@ -126,18 +120,16 @@ This method is used to remove duplicates from an array:
 const removeDuplicates = (arr) => [...new Set(arr)];
 
 console.log(removeDuplicates([1, 2, 2, 3, 3, 4, 4, 5, 5, 6]));
-复制代码
 ```
 
 ### 2. Determine whether the array is empty {#_2-判断数组是否为空}
 
-This method is used to determine whether an array is an empty array. It will return a Boolean value:
+This checks whether an array is **nonempty**; non-array inputs return false.
 
 ```javascript
 const isNotEmpty = arr => Array.isArray(arr) && arr.length > 0;
 
 isNotEmpty([1, 2, 3]);  // true
-复制代码
 ```
 
 ### 3. Merge two arrays {#_3-合并两个数组}
@@ -147,8 +139,7 @@ You can use the following two methods to merge two arrays:
 ```javascript
 const merge = (a, b) => a.concat(b);
 
-const merge = (a, b) => [...a, ...b];
-复制代码
+const mergeWithSpread = (a, b) => [...a, ...b];
 ```
 
 ## 4\. Digital operations {#四、数字操作}
@@ -161,7 +152,6 @@ This method is used to determine whether a number is odd or even:
 const isEven = num => num % 2 === 0;
 
 isEven(996);
-复制代码
 ```
 
 ### 2. Get the average of a set of numbers {#_2-获得一组数的平均值}
@@ -170,7 +160,6 @@ isEven(996);
 const average = (...args) => args.reduce((a, b) => a + b) / args.length;
 
 average(1, 2, 3, 4, 5);   // 3
-复制代码
 ```
 
 ### 3. Get a random integer between two integers {#_3-获取两个整数之间的随机整数}
@@ -181,7 +170,6 @@ This method is used to get a random integer between two integers
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 random(1, 50);
-复制代码
 ```
 
 ### 4. Round to specified digits {#_4-指定位数四舍五入}
@@ -193,7 +181,6 @@ const round = (n, d) => Number(Math.round(n + "e" + d) + "e-" + d)
 
 round(1.005, 2) //1.01
 round(1.555, 2) //1.56
-复制代码
 ```
 
 ## 5\. Color operation {#五、颜色操作}
@@ -206,7 +193,6 @@ This method can convert an RGB color value into a hexadecimal value:
 const rgbToHex = (r, g, b) => "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 
 rgbToHex(255, 255, 255);  // '#ffffff'
-复制代码
 ```
 
 ### 2. Get random hex color {#_2-获取随机十六进制颜色}
@@ -214,10 +200,9 @@ rgbToHex(255, 255, 255);  // '#ffffff'
 This method is used to obtain a random hexadecimal color value:
 
 ```javascript
-const randomHex = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0")}`;
+const randomHex = () => "#" + Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, "0");
 
 randomHex();
-复制代码
 ```
 
 ## 6\. Browser operation {#六、浏览器操作}
@@ -230,16 +215,14 @@ This method uses navigator.clipboard.writeText to copy text to the clipboard:
 const copyToClipboard = (text) => navigator.clipboard.writeText(text);
 
 copyToClipboard("Hello World");
-复制代码
 ```
 
 ### 2. Clear all cookies {#_2-清除所有cookie}
 
-This method accesses cookies and clears all cookies stored in the web page by using document.cookie:
+This example only attempts to delete script-visible cookies matching the root path; it cannot delete HttpOnly cookies or every path/domain variant.
 
 ```javascript
 const clearCookies = document.cookie.split(';').forEach(cookie => document.cookie = cookie.replace(/^ +/, '').replace(/=.*/, `=;expires=${new Date(0).toUTCString()};path=/`));
-复制代码
 ```
 
 ### 3. Get selected text {#_3-获取选中的文本}
@@ -250,7 +233,6 @@ This method gets the text selected by the user through the built-in getSelection
 const getSelectedText = () => window.getSelection().toString();
 
 getSelectedText();
-复制代码
 ```
 
 ### 4. Check if it is dark mode {#_4-检测是否是黑暗模式}
@@ -261,7 +243,6 @@ This method is used to detect whether the current environment is in dark mode. I
 const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
 
 console.log(isDarkMode)
-复制代码
 ```
 
 ### 5. Scroll to top of page {#_5-滚动到页面顶部}
@@ -272,7 +253,6 @@ This method is used to return to the top of the page:
 const goToTop = () => window.scrollTo(0, 0);
 
 goToTop();
-复制代码
 ```
 
 ### 6. Determine whether the current tab page is active {#_6-判断当前标签页是否激活}
@@ -281,7 +261,6 @@ This method is used to detect whether the current tab has been activated:
 
 ```javascript
 const isTabInView = () => !document.hidden;
-复制代码
 ```
 
 ### 7. Determine whether the current device is an Apple device {#_7-判断当前是否是苹果设备}
@@ -292,7 +271,6 @@ This method is used to detect whether the current device is an Apple device:
 const isAppleDevice = () => /Mac|iPod|iPhone|iPad/.test(navigator.platform);
 
 isAppleDevice();
-复制代码
 ```
 
 ### 8. Whether to scroll to the bottom of the page {#_8-是否滚动到页面底部}
@@ -301,7 +279,6 @@ This method is used to determine whether the page has reached the bottom:
 
 ```javascript
 const scrolledToBottom = () => document.documentElement.clientHeight + window.scrollY >= document.documentElement.scrollHeight;
-复制代码
 ```
 
 ### 9. Redirect to a URL {#_9-重定向到一个url}
@@ -312,7 +289,6 @@ This method is used to redirect to a new URL:
 const redirect = url => location.href = url
 
 redirect("https://www.google.com/")
-复制代码
 ```
 
 ### 10. Open browser print box {#_10-打开浏览器打印框}
@@ -321,7 +297,6 @@ This method is used to open the browser's print box:
 
 ```javascript
 const showPrintDialog = () => window.print()
-复制代码
 ```
 
 ## 7\. Other operations {#七、其他操作}
@@ -334,7 +309,6 @@ This method can return a random Boolean value. Use Math.random() to get a random
 const randomBoolean = () => Math.random() >= 0.5;
 
 randomBoolean();
-复制代码
 ```
 
 ### 2. variable exchange {#_2-变量交换}
@@ -343,7 +317,6 @@ You can use the following form to swap the values of two variables without using
 
 ```javascript
 [foo, bar] = [bar, foo];
-复制代码
 ```
 
 ### 3. Get the type of variable {#_3-获取变量的类型}
@@ -361,7 +334,6 @@ trueTypeOf({});     // object
 trueTypeOf([]);     // array
 trueTypeOf(0);      // number
 trueTypeOf(() => {});  // function
-复制代码
 ```
 
 ### 4. Conversion between Fahrenheit and Celsius {#_4-华氏度和摄氏度之间的转化}
@@ -377,7 +349,6 @@ celsiusToFahrenheit(0);     // 32
 celsiusToFahrenheit(-20);   // -4
 fahrenheitToCelsius(59);    // 15
 fahrenheitToCelsius(32);    // 0
-复制代码
 ```
 
 ### 5. Check if the object is empty {#_5-检测对象是否为空}
@@ -386,7 +357,6 @@ This method is used to detect whether a JavaScript object is empty:
 
 ```javascript
 const isEmpty = obj => Reflect.ownKeys(obj).length === 0 && obj.constructor === Object;
-复制代码
 ```
 
 ## Regular basic syntax {#正则基本语法}
@@ -395,9 +365,9 @@ const isEmpty = obj => Reflect.ownKeys(obj).length === 0 && obj.constructor === 
 ^ 匹配一个输入或一行的开头，/^a/匹配"an A"，而不匹配"An a" 
 $ 匹配一个输入或一行的结尾，/a$/匹配"An a"，而不匹配"an A" 
 * 匹配前面元字符0次或多次，/ba*/将匹配b,ba,baa,baaa 
-+ 匹配前面元字符1次或多次，/ba*/将匹配ba,baa,baaa 
-? 匹配前面元字符0次或1次，/ba*/将匹配b,ba  当该字符紧跟在任何一个其他限制符（*,+,?，{n}，{n,}，{n,m}）后面时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。例如，对于字符串“oooo”，“o+?”将匹配单个“o”，而“o+”将匹配所有“o”。
-(x) 匹配x保存x在名为$1...$9的变量中 要匹配圆括号字符，请使用\n来引用，n表示第几个匹配的分组
++ 匹配前面的表达式 1 次或多次，如 /ba+/ 匹配 ba、baa，不匹配单独的 b。
+? 匹配前面的表达式 0 次或 1 次，如 /ba?/ 匹配 b、ba；紧跟量词时表示非贪婪匹配。
+(x) 是捕获组；反向引用如 /([ab])\\1/，字面括号应转义为 \\( 与 \\)。
 x|y 匹配x或y 
 {n} 精确匹配n次 
 {n,} 匹配n次以上 
@@ -420,8 +390,8 @@ x|y 匹配x或y
 \S 匹配一个非空白字符，等于/[^\n\f\r\t\v]/ 。[^ \f\n\r\t\v]。
 \t 匹配一个制表符 。等价于\x09和\cI。
 \v 匹配一个垂直制表符 等价于\x0b和\cK。
-\w 匹配一个可以组成单词的字符(alphanumeric，这是我的意译，含数字)，包括下划线，如[\w]匹配"$5.98"中的5，等于[a-zA-Z0-9] 
-\W 匹配一个不可以组成单词的字符，如[\W]匹配"$5.98"中的$，等于[^a-zA-Z0-9]。
+\\w 匹配 ASCII 字母、数字和下划线，基本等价于 [A-Za-z0-9_]。
+\\W 匹配不属于 \\w 的字符，基本等价于 [^A-Za-z0-9_]。
 \xn 匹配n，其中n为十六进制转义值。十六进制转义值必须为确定的两个数字长。例如，“\x41”匹配“A”。“\x041”则等价于“\x04&1”。正则表达式中可以使用ASCII编码。
 \num 匹配num，其中num是一个正整数。对所获取的匹配的引用。例如，“(.)\1”匹配两个连续的相同字符。
 \n 标识一个八进制转义值或一个向后引用。如果\n之前至少n个获取的子表达式，则n为向后引用。否则，如果n为八进制数字（0-7），则n为一个八进制转义值。
@@ -506,7 +476,7 @@ x|y
 Method one:
 
 ```js
-^(?:([A-Z])(?!.*?\1)){10}$
+/^(?:([A-Z])(?!.*?\1)){10}$/.test("ABCDEFGHIJ");
 ```
 
 Method two:
@@ -520,11 +490,10 @@ Method two:
 ```js
 
 function thousandBitSeparator(num) {
-    return num && num
-        .toString()
-        .replace(/(\d)(?=(\d{3})+\.)/g, function($0, $1) {
-            return $1 + ",";
-        });
+    if (!Number.isFinite(num)) throw new TypeError('Expected a finite number');
+    const [integer, fraction] = String(num).split('.');
+    const grouped = integer.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return fraction === undefined ? grouped : grouped + '.' + fraction;
 }
 console.log(thousandBitSeparator(-1234567.9012));
 ```

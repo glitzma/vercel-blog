@@ -12,7 +12,7 @@ author:
   link: https://github.com/happy760690
 ---
 
-## axios
+## axios {#axios}
 
 axios is a promise-based http library that can be used in browsers and node.js
 
@@ -33,7 +33,7 @@ axios is a promise-based http library that can be used in browsers and node.js
 
 [https://developers.google.com/web/fundamentals/primers/promises?hl=zh-cn#promise-api-reference](https://developers.google.com/web/fundamentals/primers/promises?hl=zh-cn#promise-api-reference)
 
-### promise 
+### promise  {#promise}
 
 ### Multiple requests in parallel {#多个请求并列}
 
@@ -159,7 +159,7 @@ fetch({
 
 ```
 
-## axios、fetch、ajax(jquery)
+## axios、fetch、ajax(jquery) {#axios、fetch、ajax-jquery}
 
 axios and fetch are based on promise, and ajax is on callback.\
-fetch is a new syntax that breaks away from xhr. It does not pass cookies by default and cannot monitor the request progress like xhr.
+Fetch is independent of XHR. Default same-origin credentials send eligible same-origin cookies; cross-origin cookies require include plus compatible CORS and cookie policies. Fetch has no standard XHR-style upload progress event.[Credentials](https://developer.mozilla.org/en-US/docs/Web/API/Request/credentials).

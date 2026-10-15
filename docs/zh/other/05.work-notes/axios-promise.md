@@ -12,7 +12,7 @@ author:
   link: https://github.com/happy760690
 ---
 
-## axios
+## axios {#axios}
 
 axios是基于promise的http库，可以用于浏览器和node.js中
 
@@ -25,7 +25,7 @@ axios是基于promise的http库，可以用于浏览器和node.js中
 - 自动转换 JSON 数据
 - 客户端支持防御 XSRF
 
-##  promise 用法文档
+##  promise 用法文档 {#promise-用法文档}
 
 [http://liubin.org/promises-book/#chapter1-what-is-promise](http://liubin.org/promises-book/#chapter1-what-is-promise)
 
@@ -33,9 +33,9 @@ axios是基于promise的http库，可以用于浏览器和node.js中
 
 [https://developers.google.com/web/fundamentals/primers/promises?hl=zh-cn#promise-api-reference](https://developers.google.com/web/fundamentals/primers/promises?hl=zh-cn#promise-api-reference)
 
-### promise 
+### promise  {#promise}
 
-### 多个请求并列
+### 多个请求并列 {#多个请求并列}
 
 ```js
 async tidyData(){
@@ -67,7 +67,7 @@ var asyncIterable = {
 })();
 ```
 
-###  N个并发请求
+###  N个并发请求 {#n个并发请求}
 帮助函数处理并发请求。
 
 ```sh
@@ -127,7 +127,7 @@ addTask(300, '7')
 //  2314
 ```
 
-## 执行多个并发请求
+## 执行多个并发请求 {#执行多个并发请求}
 
 ```javascript
 function getUserAccount() {
@@ -148,7 +148,7 @@ axios.all([getUserAccount(), getUserPermissions()])
 
 ```
 
-## fetch操纵http管道
+## fetch操纵http管道 {#fetch操纵http管道}
 
 ```javascript
 fetch({
@@ -159,7 +159,7 @@ fetch({
 
 ```
 
-## axios、fetch、ajax(jquery)
+## axios、fetch、ajax(jquery) {#axios、fetch、ajax-jquery}
 
 axios与fetch是基于promise形式，ajax是callback形式         
-fetch 脱离了xhr是新语法，默认不传cookie，不能像xhr监听请求进度
+fetch 独立于 XHR，默认 credentials 为 same-origin，会携带符合规则的同源 Cookie；跨源 Cookie 需配置 include 并满足 CORS 和 Cookie 策略。Fetch 没有 XHR 式的标准上传进度事件。[credentials](https://developer.mozilla.org/en-US/docs/Web/API/Request/credentials)。
